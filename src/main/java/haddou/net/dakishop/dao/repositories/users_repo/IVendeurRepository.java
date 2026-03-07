@@ -1,4 +1,9 @@
 package haddou.net.dakishop.dao.repositories.users_repo;
 
-public interface IVendeurRepository {
+import haddou.net.dakishop.dao.entities.users.Vendeur;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface IVendeurRepository extends JpaRepository<Vendeur,Long> {
 }

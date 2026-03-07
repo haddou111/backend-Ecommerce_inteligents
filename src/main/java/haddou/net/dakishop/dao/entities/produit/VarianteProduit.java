@@ -1,32 +1,30 @@
 package haddou.net.dakishop.dao.entities.produit;
 
-
-import haddou.net.dakishop.dao.entities.users.Client;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Avis {
+public class VarianteProduit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String commentaire;
-    private int note; // Note de 1 à 5 Pour inclue la fonctionnalitée proposée par M.yassine comme les etoiles
-    private LocalDateTime dateAvis;
-
-    @ManyToOne
-    private Client client;
     @ManyToOne
     private Produit produit;
+    private String reference;
+    private String couleur;
+    private String taille;
+    private int stock;
+    private double prix;
+    private String imageUrl; // est ce que en peut ajouter une liste des images ?
 
+    private boolean actif; // pour savoir si la variante est disponible à la vente ou pas
+    private String autresCaracteristiques;
 
 }

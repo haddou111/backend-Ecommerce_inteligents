@@ -10,6 +10,8 @@ package haddou.net.dakishop.metier.service.besoin_metier.user_service;
 
  */
 
+import haddou.net.dakishop.dao.entities.stati_avantage.DemandeAvantage;
+
 public interface IVendeurService {
 
     // Confirmation des commandes
@@ -30,7 +32,7 @@ public interface IVendeurService {
     List<Produit> voirMesProduits(Long sellerId);
 
     // Demande d'avantage
-    DemandeAvantage DemandeAvantage(Long sellerId, DemandeDTO dto);
+    DemandeAvantage demandedvantage(Long sellerId, DemandeDTO dto);
     StatutDemande voirStatutDemande(Long demandeId);
 
 }
