@@ -5,7 +5,16 @@ import haddou.net.dakishop.dao.entities.commande.Panier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+import java.util.Optional;
 
-public interface IPanierRepository extends JpaRepository<Panier,Long> {
+@Repository
+public interface IPanierRepository extends JpaRepository<Panier, Long> {
+
+    Optional<Panier> findByClientIdAndActifTrue(Long clientId);
+
+    Optional<Panier> findByClientId(Long clientId);
+
+    boolean existsByClientIdAndActifTrue(Long clientId);
+
+    Optional<Panier> findByCodePromo(String codePromo);
 }
