@@ -35,11 +35,11 @@ public class DemandeAvantage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vendeur_id")
     private Vendeur vendeur;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "avantage_id")
     private Avantage avantage;
 
@@ -49,7 +49,7 @@ public class DemandeAvantage {
     private StatutAvantage statut;
     private String commentaireAdmin;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "admin_id")
     private Admin adminTraitant;
     private LocalDateTime datedebut;

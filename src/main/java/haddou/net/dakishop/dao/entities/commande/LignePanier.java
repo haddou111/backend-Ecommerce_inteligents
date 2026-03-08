@@ -7,22 +7,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDateTime;
 
-
 /**
- * @author  haddou
- * Cette classe représente une ligne de panier dans le système de commande.
- * Elle contient des informations sur la quantité, le prix unitaire et la date d'ajout d'un produit dans le panier.
- * et voici le deroulement total des relations entre les classes :
- * Client
- *   └──(1,1)──► Panier  ←─── actif = true
- *                 └──(1,N)──► LignePanier
- *                                └── VarianteProduit (N,1)
+ * @author haddou
+ *         Cette classe représente une ligne de panier dans le système de
+ *         commande.
+ *         Elle contient des informations sur la quantité, le prix unitaire et
+ *         la date d'ajout d'un produit dans le panier.
+ *         et voici le deroulement total des relations entre les classes :
+ *         Client
+ *         └──(1,1)──► Panier ←─── actif = true
+ *         └──(1,N)──► LignePanier
+ *         └── VarianteProduit (N,1)
  *
- *          ──── validation ────►
+ *         ──── validation ────►
  *
- *   └──(1,N)──► Commande  ←─── créée depuis le Panier
- *                 └──(1,N)──► LigneCommande
- *                                └── VarianteProduit (N,1)
+ *         └──(1,N)──► Commande ←─── créée depuis le Panier
+ *         └──(1,N)──► LigneCommande
+ *         └── VarianteProduit (N,1)
  */
 
 @Entity
@@ -35,13 +36,12 @@ public class LignePanier {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "panier_id")
     private Panier panier;
 
     private int quantite;
     private double prixUnitaire;
     private LocalDateTime dateAjout;
-
 
 }

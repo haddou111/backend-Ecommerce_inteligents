@@ -1,5 +1,5 @@
 package haddou.net.dakishop.metier.dto.registrer;
 
-public class RegisterClientDTO extends RegistrerDTO{
+public class RegistrerClientDTO extends RegistrerDTO{
     private String adresseLivraison;
 }

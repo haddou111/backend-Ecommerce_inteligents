@@ -11,6 +11,11 @@ package haddou.net.dakishop.metier.service.besoin_metier.user_service;
 
 */
 
+import haddou.net.dakishop.dao.entities.produit.Produit;
+import haddou.net.dakishop.dao.entities.users.Client;
+
+import java.util.List;
+
 public interface IAdminService {
 
     // 1. Répondre demande avantage
@@ -34,6 +39,5 @@ public interface IAdminService {
 
     List<Client> consulterTousLesUtilisateurs();
 
-    // 5. Affecter DP/DR (Delivery Person)
-    Livreur affecterLivreur(Long commandeId, Long livreurId);
+
 }

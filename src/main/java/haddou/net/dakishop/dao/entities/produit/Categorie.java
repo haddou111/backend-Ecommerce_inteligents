@@ -21,7 +21,7 @@ public class Categorie {
     private String description;
     private String imageUrl;
     private boolean actif;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Categorie parent;           // ← "je suis enfant de qui ?"
 

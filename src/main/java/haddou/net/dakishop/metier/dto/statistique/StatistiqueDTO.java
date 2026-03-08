@@ -1,4 +1,4 @@
-package haddou.net.dakishop.metier.dto;
+package haddou.net.dakishop.metier.dto.statistique;
 
 public class StatistiqueDTO {
     private int nombreTotalClients;

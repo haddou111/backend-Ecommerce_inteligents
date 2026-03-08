@@ -42,11 +42,11 @@ public class Produit {
     private boolean disponible;
     private boolean enPromotion;
     private int nbreVentes;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vendeur_id")
     private Vendeur vendeur;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categorie_id")
     private Categorie categorie;
 

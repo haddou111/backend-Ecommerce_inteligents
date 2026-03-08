@@ -1,10 +1,13 @@
 package haddou.net.dakishop.security;
 
+import haddou.net.dakishop.dao.entities.users.Utilisateur;
+import haddou.net.dakishop.metier.enums.Role;
+
 public interface ITokenService {
 
 
-    String genererAccessToken(User user);
-    String genererRefreshToken(User user);
+    String genererAccessToken(Utilisateur user);
+    String genererRefreshToken(Utilisateur user);
     String rafraichirToken(String refreshToken);
     boolean validerToken(String token);
     String extraireEmail(String token);
