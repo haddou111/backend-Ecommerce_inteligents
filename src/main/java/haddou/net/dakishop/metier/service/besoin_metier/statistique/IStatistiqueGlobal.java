@@ -1,6 +1,9 @@
 package haddou.net.dakishop.metier.service.besoin_metier.statistique;
 
-import haddou.net.dakishop.metier.dto.StatistiqueDTO;
+import haddou.net.dakishop.dao.entities.commande.Commande;
+import haddou.net.dakishop.dao.entities.produit.Produit;
+import haddou.net.dakishop.dao.entities.users.Client;
+import haddou.net.dakishop.metier.dto.statistique.StatistiqueDTO;
 
 import java.util.List;
 

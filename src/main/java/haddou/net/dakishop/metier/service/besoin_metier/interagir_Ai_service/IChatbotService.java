@@ -1,7 +1,9 @@
 package haddou.net.dakishop.metier.service.besoin_metier.interagir_Ai_service;
 
 
+import haddou.net.dakishop.dao.entities.interagir_IA.Message;
 
+import java.util.List;
 
 public interface IChatbotService {
 
@@ -10,5 +12,5 @@ public interface IChatbotService {
 
 
     // Historique des conversations
-    List<MessageChat> voirHistoriqueChat(Long clientId);
+    List<Message> voirHistoriqueChat(Long clientId);
 }

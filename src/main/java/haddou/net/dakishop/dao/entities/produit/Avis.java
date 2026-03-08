@@ -23,11 +23,11 @@ public class Avis {
     private int note; // Note de 1 à 5 Pour inclue la fonctionnalitée proposée par M.yassine comme les etoiles
     private LocalDateTime dateAvis;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client_id")
     private Client client;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produit_id")
     private Produit produit;
 

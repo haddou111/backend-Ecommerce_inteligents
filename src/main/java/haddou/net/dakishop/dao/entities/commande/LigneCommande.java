@@ -36,15 +36,15 @@ public class LigneCommande {
     private double prixUnitaire;
     private int quantite;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "commande_id")
     private Commande commande;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "produit_id")
     private Produit produit;
 
-    @ManyToOne
+    @ManyToOne(fetch =FetchType.LAZY)
     @JoinColumn(name = "vendeur_id")
     private Vendeur vendeur;
 

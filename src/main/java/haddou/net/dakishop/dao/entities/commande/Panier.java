@@ -25,7 +25,7 @@ public class Panier {
     private LocalDateTime updatedAt;
     private String codePromo;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client_id")
     private Client client;
 

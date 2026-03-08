@@ -1,7 +1,6 @@
 package haddou.net.dakishop.metier.service.besoin_metier.user_service;
 
 
-
 /*
 
   @author : haddou
@@ -10,7 +9,15 @@ package haddou.net.dakishop.metier.service.besoin_metier.user_service;
 
  */
 
+import haddou.net.dakishop.dao.entities.commande.Commande;
+import haddou.net.dakishop.dao.entities.produit.Produit;
 import haddou.net.dakishop.dao.entities.stati_avantage.DemandeAvantage;
+import haddou.net.dakishop.metier.dto.avantage_service_dto.DemandeDTO;
+import haddou.net.dakishop.metier.dto.produit_service_dto.ProduitDTO;
+import haddou.net.dakishop.metier.enums.StatutAvantage;
+import haddou.net.dakishop.metier.enums.StatutCommande;
+
+import java.util.List;
 
 public interface IVendeurService {
 
@@ -19,7 +26,7 @@ public interface IVendeurService {
     List<Commande> voirCommandesAConfirmer(Long sellerId);
 
     // Voir statistiques produits
-    StatistiquesProduit voirStatistiquesProduits(Long sellerId);
+//    StatistiquesProduit voirStatistiquesProduits(Long sellerId);
 
     // Gestion des commandes
     List<Commande> voirToutesLesCommandes(Long sellerId);
@@ -32,7 +39,7 @@ public interface IVendeurService {
     List<Produit> voirMesProduits(Long sellerId);
 
     // Demande d'avantage
-    DemandeAvantage demandedvantage(Long sellerId, DemandeDTO dto);
-    StatutDemande voirStatutDemande(Long demandeId);
+    DemandeAvantage demandeAvantage(Long sellerId, DemandeDTO dto);
+    StatutAvantage voirStatutDemande(Long demandeId);
 
 }

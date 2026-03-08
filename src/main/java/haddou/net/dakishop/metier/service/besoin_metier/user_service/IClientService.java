@@ -1,6 +1,14 @@
 package haddou.net.dakishop.metier.service.besoin_metier.user_service;
 
 
+import haddou.net.dakishop.dao.entities.commande.Commande;
+import haddou.net.dakishop.dao.entities.commande.Panier;
+import haddou.net.dakishop.dao.entities.produit.Produit;
+import haddou.net.dakishop.dao.entities.users.Client;
+import haddou.net.dakishop.metier.dto.commande_service_dto.CommandeDTO;
+import haddou.net.dakishop.metier.dto.user_service_dto.ClientDTO;
+import haddou.net.dakishop.metier.enums.StatutCommande;
+
 import java.util.List;
 
 /*
