@@ -22,8 +22,10 @@ public class Conversation {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "client_id")
     private Client client;
-    @OneToMany
+
+    @OneToMany(mappedBy = "conversation")
     private List<Message> messages;
     private String titre;
     private LocalDateTime createdAt;

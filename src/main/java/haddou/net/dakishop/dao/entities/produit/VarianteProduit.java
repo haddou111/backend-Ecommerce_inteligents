@@ -16,6 +16,7 @@ public class VarianteProduit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
+    @JoinColumn(name = "produit_id")
     private Produit produit;
     private String reference;
     private String couleur;

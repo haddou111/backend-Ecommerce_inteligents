@@ -43,13 +43,22 @@ public class Produit {
     private boolean enPromotion;
     private int nbreVentes;
     @ManyToOne
+    @JoinColumn(name = "vendeur_id")
     private Vendeur vendeur;
+
     @ManyToOne
+    @JoinColumn(name = "categorie_id")
     private Categorie categorie;
 
     @ManyToMany
+    @JoinTable(
+        name = "produit_promotion",
+        joinColumns = @JoinColumn(name = "produit_id"),
+        inverseJoinColumns = @JoinColumn(name = "promotion_id")
+    )
     private List<Promotion> promotion;
-    @OneToMany
+
+    @OneToMany(mappedBy = "produit")
     private List<Avis> avisList;
 
 

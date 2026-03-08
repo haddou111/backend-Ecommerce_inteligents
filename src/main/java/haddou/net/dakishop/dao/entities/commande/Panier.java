@@ -26,12 +26,14 @@ public class Panier {
     private String codePromo;
 
     @OneToOne
-    private Client client ;
+    @JoinColumn(name = "client_id")
+    private Client client;
 
-    @OneToMany
+    @OneToMany(mappedBy = "panier")
     private List<LignePanier> lignesPanier;
 
     @ManyToOne
+    @JoinColumn(name = "promotion_id")
     private Promotion promotion;
 
     private double totalPrice;

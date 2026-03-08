@@ -22,14 +22,14 @@ public class Commande {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
-    private String reference;
-
     @ManyToOne
+
+    @JoinColumn(name = "client_id")
     private Client client;
 
-    @OneToMany
+    @OneToMany(mappedBy = "commande")
     private List<LigneCommande> ligneCommandeList;
+
 
     private LocalDateTime datecommande;
     private LocalDateTime datelivraison;

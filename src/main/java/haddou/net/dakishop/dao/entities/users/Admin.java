@@ -9,6 +9,7 @@ import lombok.Setter;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@PrimaryKeyJoinColumn(name = "admin_id")
 @Setter
 @Getter
 @AllArgsConstructor

@@ -33,7 +33,7 @@ public class Promotion {
     private int usagesMax;
     private int usagesActuels;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "promotion")
     private List<Produit> produit;
 
 

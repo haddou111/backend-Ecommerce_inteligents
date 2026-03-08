@@ -36,6 +36,7 @@ public class LignePanier {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "panier_id")
     private Panier panier;
 
     private int quantite;

@@ -24,8 +24,11 @@ public class Avis {
     private LocalDateTime dateAvis;
 
     @ManyToOne
+    @JoinColumn(name = "client_id")
     private Client client;
+
     @ManyToOne
+    @JoinColumn(name = "produit_id")
     private Produit produit;
 
 

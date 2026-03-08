@@ -12,6 +12,7 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@PrimaryKeyJoinColumn(name = "vendeur_id")
 @Setter
 @Getter
 @AllArgsConstructor
@@ -19,7 +20,7 @@ import java.util.List;
 public class Vendeur extends Utilisateur {
     private  String nomBoutique;
     private String adresseBoutique;
-    @OneToMany
+    @OneToMany(mappedBy = "vendeur")
     private List<Produit> produit;
     @Enumerated(EnumType.STRING)
     private StatusVendeur statutVendeur;

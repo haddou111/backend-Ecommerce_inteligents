@@ -36,8 +36,11 @@ public class DemandeAvantage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
+    @JoinColumn(name = "vendeur_id")
     private Vendeur vendeur;
+
     @ManyToOne
+    @JoinColumn(name = "avantage_id")
     private Avantage avantage;
 
     private LocalDateTime dateDemande;
@@ -47,6 +50,7 @@ public class DemandeAvantage {
     private String commentaireAdmin;
 
     @ManyToOne
+    @JoinColumn(name = "admin_id")
     private Admin adminTraitant;
     private LocalDateTime datedebut;
     private LocalDateTime datefin;

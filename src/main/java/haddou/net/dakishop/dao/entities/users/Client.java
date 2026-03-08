@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@PrimaryKeyJoinColumn(name = "client_id")
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor

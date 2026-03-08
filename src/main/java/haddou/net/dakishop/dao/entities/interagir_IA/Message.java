@@ -33,6 +33,7 @@ public class Message {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "conversation_id")
     private Conversation conversation;
 
     private String content;
