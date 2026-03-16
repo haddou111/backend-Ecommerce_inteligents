@@ -6,7 +6,7 @@ import haddou.net.dakishop.metier.dto.paiement_service_dto.PaiementDTO;
 import haddou.net.dakishop.metier.enums.TypePaiement;
 import haddou.net.dakishop.metier.service.besoin_metier.strategy_paiement_service.IPaiementStrategy;
 
-import static haddou.net.dakishop.metier.enums.TypePaiement.CARTE_BANCAIRE;
+import static haddou.net.dakishop.metier.enums.TypePaiement.Virment_bancaire;
 
 public class CarteBancaireStrategy implements IPaiementStrategy {
 
@@ -17,6 +17,6 @@ public class CarteBancaireStrategy implements IPaiementStrategy {
 
     @Override
     public TypePaiement getMode() {
-        return CARTE_BANCAIRE;
+        return Virment_bancaire;
     }
 }

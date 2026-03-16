@@ -22,11 +22,13 @@ public class Conversation {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+
     @JoinColumn(name = "client_id")
     private Client client;
 
     @OneToMany(mappedBy = "conversation")
     private List<Message> messages;
+
     private String titre;
     private LocalDateTime createdAt;
     private LocalDateTime lastmessageAt;

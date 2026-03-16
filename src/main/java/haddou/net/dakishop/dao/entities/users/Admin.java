@@ -17,6 +17,7 @@ import lombok.Setter;
 public class Admin extends Utilisateur {
     @Enumerated(EnumType.STRING)
     private NiveauAcces niveauAcces;
+    //a discuter par suite
 
 
 

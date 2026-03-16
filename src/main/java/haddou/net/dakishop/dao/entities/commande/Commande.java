@@ -33,6 +33,8 @@ public class Commande {
     @OneToOne(mappedBy = "commande",fetch = FetchType.LAZY)
     @JoinColumn(name = "paiement_id")
     private Paiement paiement;
+
+
     private String reference;
     private LocalDateTime datecommande;
     private LocalDateTime datelivraison;

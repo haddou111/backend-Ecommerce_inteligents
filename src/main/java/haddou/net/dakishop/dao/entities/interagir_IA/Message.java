@@ -22,6 +22,8 @@ import java.time.LocalDateTime;
  *                               └── role: SYSTEM    ← instruction système (caché)
  */
 
+
+
 @Entity
 @Setter
 @Getter

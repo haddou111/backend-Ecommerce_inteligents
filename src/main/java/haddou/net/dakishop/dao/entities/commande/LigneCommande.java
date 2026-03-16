@@ -49,4 +49,7 @@ public class LigneCommande {
     private Vendeur vendeur;
 
 
+    // on peut trover ici la possiblitée de l'existance d'une relation ternaire
+
+
 }
